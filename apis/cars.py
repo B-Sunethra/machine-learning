@@ -24,7 +24,7 @@ models = [
       "type": "5-seater",
       "description": "Mercedes-Benz offers top-tier performance and comfort."
     }]
-@app.get("/cars/{name}")
+@app.get("/cars")
 def car_details(name: str):
     res = {}
     if (name == "Benz"):
@@ -34,4 +34,7 @@ def car_details(name: str):
     else:
         res = models[1]
     return res
+
+
+
 
